@@ -2,13 +2,14 @@
   <select 
     v-model="localCurrency" 
     @change="emitCurrencyChange" 
-    class="p-2 border border-gray-300 rounded-lg bg-white text-gray-800  shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-150 ease-in-out hover:border-gray-500"
+    class="w-full sm:w-auto p-2 border border-gray-300 rounded-lg bg-white text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-150 ease-in-out hover:border-gray-500"
   >
     <option value="usd">USD</option>
     <option value="eur">EUR</option>
     <option value="rub">RUB</option>
   </select>
 </template>
+
 
 <script setup>
 import { ref, watch } from 'vue';

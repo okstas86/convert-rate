@@ -1,19 +1,20 @@
 <template>
-  <div class="flex items-center space-x-4">
+  <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
     <CurrencyDropdown 
       :currency="currency" 
       @update:currency="updateCurrency"
-      class="w-24 p-2 border border-gray-300 rounded-lg bg-white text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition duration-150 ease-in-out hover:border-gray-400"
+      class="w-full sm:w-24 p-2 border border-gray-300 rounded-lg bg-white text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition duration-150 ease-in-out hover:border-gray-400"
     />
     <input
       type="number"
       :value="formattedValue"
       @input="updateValue"
-      class="p-3 border border-gray-300 rounded-lg bg-white text-gray-800 shadow-sm  focus:outline-none focus:ring-2 focus:ring-yellow-400 transition duration-150 ease-in-out hover:border-gray-400"
+      class="w-full sm:w-auto p-3 border border-gray-300 rounded-lg bg-white text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 transition duration-150 ease-in-out hover:border-gray-400"
       min="0"
     />
   </div>
 </template>
+
 
 <script setup>
 import { ref, computed, watch } from 'vue';

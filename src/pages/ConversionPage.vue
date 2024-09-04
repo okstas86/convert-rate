@@ -1,20 +1,23 @@
 <template>
-  <div class="p-8 max-w-md mx-auto bg-gradient-to-r from-gray-50 to-gray-200 rounded-2xl shadow-xl">
-    <h1 class="text-4xl font-extrabold text-gray-900 mb-8 text-center">Конвертация валют</h1>
-    <div class="space-y-8">
+  <div class="p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-lg lg:max-w-2xl mx-auto bg-gradient-to-r from-gray-50 to-gray-200 rounded-2xl shadow-xl">
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-6 sm:mb-8 text-center">
+      Конвертация валют
+    </h1>
+    <div class="space-y-6 sm:space-y-8">
       <CurrencyInput 
         v-model:value="fromValue" 
         v-model:currency="fromCurrency" 
-        class="bg-gray-50 p-4 rounded-xl border border-gray-300 shadow-sm transition-all duration-300 ease-in-out hover:bg-gray-100 focus:ring-4 focus:ring-yellow-300"
+        class="bg-gray-50 p-3 sm:p-4 rounded-xl border border-gray-300 shadow-sm transition-all duration-300 ease-in-out hover:bg-gray-100 focus:ring-4 focus:ring-yellow-300"
       />
       <CurrencyInput 
         v-model:value="toValue" 
         v-model:currency="toCurrency" 
-        class="bg-gray-50 p-4 rounded-xl border border-gray-300 shadow-sm transition-all duration-300 ease-in-out hover:bg-gray-100 focus:ring-4 focus:ring-yellow-300"
+        class="bg-gray-50 p-3 sm:p-4 rounded-xl border border-gray-300 shadow-sm transition-all duration-300 ease-in-out hover:bg-gray-100 focus:ring-4 focus:ring-yellow-300"
       />
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref, watch, computed } from 'vue';
